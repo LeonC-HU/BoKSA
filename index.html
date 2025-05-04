@@ -48,12 +48,26 @@
             background-color: #0056b3;
         }
     </style>
+    <script>
+        function loadIframeContent(event) {
+            event.preventDefault(); // Prevent the default link behavior
+            const iframe = document.querySelector('iframe');
+            const link = event.target;
+            fetch(link.href)
+                .then(response => response.text())
+                .then(html => {
+                    iframe.srcdoc = html;
+                })
+                .catch(error => console.error('Error loading content:', error));
+        }
+    </script>
 </head>
 <body>
     <div class="card">
         <h1>Body of Knowledge and Skills</h1>
         <h2>CMD Utrecht</h2>
-        <a href="https://canvas.hu.nl/courses/42152/pages/test-pagina">Ga verder</a>
+        <a href="https://canvas.hu.nl/courses/42152/pages/test-pagina" onclick="loadIframeContent(event)">Ga verder</a>
+        <iframe srcdoc="" frameborder="1"></iframe>
     </div>
 </body>
 </html>
