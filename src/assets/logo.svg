@@ -1,0 +1,129 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="150"
+  height="150"
+  viewBox="0 0 150 150"
+  style="--logo-line-color: #888; --logo-background-color: #F4F4F4; --logo-foreground-color: #00A1E1; --logo-support-color: #E6302B;"
+>
+  <!-- Outer Shield -->
+  <path
+    d="M 40 19 
+      L 110 19 
+      C 130 49 135 99 75 139 
+      C 15 99 20 49 40 19 
+      Z"
+    fill="var(--logo-background-color)"
+    stroke="var(--logo-line-color)"
+    stroke-width="1.5" 
+  />
+
+  <!-- Quadrant Lines -->
+  <line
+    x1="75"
+    y1="30"
+    x2="75"
+    y2="130"
+    stroke="var(--logo-line-color)"
+    stroke-width="1.5"
+  />
+  <line
+    x1="40"
+    y1="75"
+    x2="110"
+    y2="75"
+    stroke="var(--logo-line-color)"
+    stroke-width="1.5"
+  />
+
+  <!-- Small Circle at Cross Section -->
+  <circle
+    cx="75"
+    cy="75"
+    r="10"
+    fill="var(--logo-foreground-color)"
+  />
+
+  <!-- Letters -->
+  <text
+    x="55"
+    y="60"
+    font-family="Arial, sans-serif"
+    font-size="26"
+    font-weight="bold"
+    text-anchor="middle"
+    fill="var(--logo-foreground-color)"
+  >
+    B
+  </text>
+  <text
+    x="95"
+    y="60"
+    font-family="Arial, sans-serif"
+    font-size="26"
+    font-weight="bold"
+    text-anchor="middle"
+    fill="var(--logo-foreground-color)"
+  >
+    K
+  </text>
+  <text
+    x="55"
+    y="108"
+    font-family="Arial, sans-serif"
+    font-size="26"
+    font-weight="bold"
+    text-anchor="middle"
+    fill="var(--logo-foreground-color)"
+  >
+    S
+  </text>
+  <text
+    x="95"
+    y="108"
+    font-family="Arial, sans-serif"
+    font-size="26"
+    font-weight="bold"
+    text-anchor="middle"
+    fill="var(--logo-foreground-color)"
+  >
+    A
+  </text>
+
+  <!-- Paths for Curved Text -->
+  <defs>
+    <!-- Move CMD Utrecht further outside -->
+    <path
+      id="topTextPath"
+      d="M 7 32 A 120 120 0 0 1 145 32"
+      fill="none"
+    />
+    <!-- Move Prototype further outside -->
+    <path
+      id="bottomTextPath"
+      d="M 4 127 A 120 120 0 0 0 145 127"
+      fill="none"
+    />
+  </defs>
+
+  <!-- Curved Text -->
+  <text
+    font-family="Arial, sans-serif"
+    font-size="13"
+    font-weight="bold"
+    fill="var(--logo-foreground-color)"
+  >
+    <textPath href="#topTextPath" text-anchor="middle" startOffset="50%">
+      CMD UTRECHT
+    </textPath>
+  </text>
+  <text
+    font-family="Arial, sans-serif"
+    font-size="13"
+    font-weight="bold"
+    fill="var(--logo-support-color)"
+  >
+    <textPath href="#bottomTextPath" text-anchor="middle" startOffset="50%">
+      PROTOTYPE
+    </textPath>
+  </text>
+</svg>

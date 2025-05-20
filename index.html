@@ -1,73 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <base target="_parent">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BoKSA CMD Utrecht</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-        .card {
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: center;
-            max-width: 400px;
-            width: 100%;
-        }
-        .card h1 {
-            margin: 0 0 10px;
-            font-size: 24px;
-            color: #333;
-        }
-        .card h2 {
-            margin: 0 0 20px;
-            font-size: 18px;
-            color: #666;
-        }
-        .card a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
-            font-size: 16px;
-            margin-top: 20px;
-        }
-        .card a:hover {
-            background-color: #0056b3;
-        }
-    </style>
-    <script>
-        function loadIframeContent(event) {
-            event.preventDefault(); // Prevent the default link behavior
-            const iframe = document.querySelector('iframe');
-            const link = event.target;
-            fetch(link.href)
-                .then(response => response.text())
-                .then(html => {
-                    iframe.srcdoc = html;
-                })
-                .catch(error => console.error('Error loading content:', error));
-        }
-    </script>
-</head>
-<body>
-    <div class="card">
-        <h1>Body of Knowledge and Skills</h1>
-        <h2>CMD Utrecht</h2>
-        <a href="https://canvas.hu.nl/courses/42152/pages/test-pagina" onclick="loadIframeContent(event)">Ga verder</a>
-        <iframe srcdoc="" frameborder="1"></iframe>
-    </div>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vite App</title>
+    </head>
+    <body>
+        <div id="app"></div>
+        <script type="module" src="/src/main.ts"></script>
+        <script src="https://cdn.jsdelivr.net/npm/holderjs@2.9.9/holder.min.js"></script>
+    </body>
 </html>
