@@ -1,11 +1,21 @@
 {
     "cSpell.words": [
-        "inputtext",
-        "primeicons",
-        "primeui",
-        "primeuix",
-        "primevue",
-        "Topbar",
-        "unplugin"
-    ]
+      "holderjs",
+      "inputtext",
+      "lara",
+      "nora",
+      "primeicons",
+      "primeui",
+      "primeuix",
+      "primevue",
+      "scalein",
+      "soho",
+      "styleclass",
+      "tailwindcss",
+      "Topbar",
+      "unplugin",
+      "vueuse"
+    ],
+    // To prevent typescript error for Tailwind statements like @theme and @apply 
+    "css.validate": false
 }

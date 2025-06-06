@@ -22,6 +22,6 @@
         "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true
     },
-    "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "node_modules/@types/vue-lorem-ipsum/vue-lorem-ipsum.d.ts"],
+    "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "node_modules/@types/vue-lorem-ipsum/vue-lorem-ipsum.d.ts", "src/composables/useThemeConfig.ts"],
     "references": [{ "path": "./tsconfig.node.json" }]
 }

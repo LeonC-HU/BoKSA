@@ -1,27 +1,32 @@
-# primevue-quickstart-create-vue-ts
+# CMD Utrecht BoKSA prototype
 
-This template should help get you started developing with Vue 3 in Vite.
+Web application prototype for the **Body of Knowledge Skill and Attitudes (BoKSA)** at the Dutch bachelor program [Communication and Multimedia Design](https://www.hu.nl/voltijd-opleidingen/communication-and-multimedia-design) of the university of applied sciences in Utrecht.
 
-## Recommended IDE Setup
+### Goals:
+- Create a user friendly overview of all items in the BoKSA with sufficient search and filter functionalities to be used by students and teaching staff. 
+- Encourage communication and reach agreement about the required information architecture and (meta)data for the BoKSA by co-designing and creating this website.
+- Build a proof-of-concept work-around to create a front-page within a [Canvas LMS](https://www.instructure.com/k12/products/canvas/canvas-lms) as an iFrame that redirects to underlying course pages. In a future version this might be extended to become a stand-alone full-stack website, or be integrated as a Canvas LMS plugin.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Project Setup
 
-## Type Support for `.vue` Imports in TS
+This is a single page application (SPA) without server-side backend. The following web technologies are used:
+- [Vite](https://vite.dev/) v5 build tool
+- [Vue.js](https://vuejs.org/) v3 using composition API
+- [PrimeVue](https://primevue.org/) v4 UI suite in Styled Mode
+- [TailwindCSS](https://tailwindcss.com) v4.1
+- [Typescript](https://www.typescriptlang.org/)
+- [Visual Studio Code](https://code.visualstudio.com) editor with extensions for auto-renaming, debugging, formatting, linting, etc. 
+- [GitHub](https://github.com/) with Copilot Pro
+- [Npm.js](https://www.npmjs.com/)
+- [Node.js](https://nodejs.org/) modules and some other libraries for things like:
+  - [Masonry grid](https://github.com/shershen08/vue-masonry)
+  - Boilerplate content like [Lorem Ipsum](https://github.com/shershen08/vue-lorem-ipsum) text and [Holder.js](https://holderjs.com) for placeholder images
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
+### Customize configuration
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-## Project Setup
+### Installation
 
 ```sh
 npm install
