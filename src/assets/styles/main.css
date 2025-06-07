@@ -9,6 +9,14 @@
   --breakpoint-xs: 30rem;
 }
 
+/* Global styles for horizontal scrolling on small screens */
+@media screen and (max-width: 430px) {
+  html, body {
+    min-width: 360px;
+    overflow-x: auto;
+  }
+}
+
 html {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;

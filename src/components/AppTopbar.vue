@@ -11,7 +11,9 @@ const { themeState } = useThemeState();
     <template #start>
       <div class="flex justify-between items-center">
         <div class="flex items-center">
+          <!-- Logo -->
           <MainLogo />
+          <!-- Title -->
           <span class="hidden sm:flex sm:flex-col sm:ml-2">
             <span class="text-color-700 text-xl font-light leading-none"
               >CMD Utrecht</span
@@ -26,10 +28,13 @@ const { themeState } = useThemeState();
         </div>
       </div>
     </template>
-    <template #center>
-    </template>
+    <!-- <template #center>
+      No center section yet
+    </template> -->
     <template #end>
+      <!-- Theme settings -->
       <div class="flex items-center">
+        <!-- Dark mode toggle -->
         <div class="relative">
           <Button
             v-if="themeState.darkMode.visible"
@@ -48,7 +53,8 @@ const { themeState } = useThemeState();
               ]"/>
           </Button>
         </div>
-        <div class="relative">
+        <!-- Theme configuration panel -->
+        <div class="relative mr-1">
           <Button
             size="small"
             v-styleclass="{
@@ -65,7 +71,8 @@ const { themeState } = useThemeState();
             aria-label="Settings" />
           <AppConfig />
         </div>
-        <InputGroup>
+        <!-- Search and filter section -->
+        <InputGroup class="w-auto max-w-[160px] xs-min-w-fullvite preview xs:max-w-full sm::min-w-xs">
           <IconField>
             <InputIcon class="pi pi-search" />
             <InputText 
