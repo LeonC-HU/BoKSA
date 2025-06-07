@@ -126,7 +126,7 @@ onMounted(() => {
       <a
         :href="card.href"
         :title="card.title"
-        target="_blank"
+        target="_parent"
         rel="noopener noreferrer"
         class="block no-underline text-inherit">
         <Card class="mx-0 my-2 md:mr-4 rounded">
