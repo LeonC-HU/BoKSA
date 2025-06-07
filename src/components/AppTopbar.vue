@@ -72,7 +72,7 @@ const { themeState } = useThemeState();
           <AppConfig />
         </div>
         <!-- Search and filter section -->
-        <InputGroup class="w-auto max-w-[160px] xs-min-w-fullvite preview xs:max-w-full sm::min-w-xs">
+        <InputGroup class="w-auto max-w-[160px] xs-min-w-full preview xs:max-w-full sm::min-w-xs">
           <IconField>
             <InputIcon class="pi pi-search" />
             <InputText 
