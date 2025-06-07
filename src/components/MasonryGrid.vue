@@ -23,7 +23,7 @@ const useBoilerplateContent = inject<Ref<boolean>>(
 );
 
 if (useBoilerplateContent.value) {
-  useScriptTag("./node_modules/holderjs/holder.min.js");
+  useScriptTag("./src/holder.min.js");
 }
 
 const instance = getCurrentInstance();
