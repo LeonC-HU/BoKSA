@@ -1,7 +1,3 @@
-const url = document.location.href;
-localStorage.setItem("url", url);
-console.log(url);
-
 import "./assets/styles/main.css";
 import { createApp } from "vue";
 import App from "./App.vue";
