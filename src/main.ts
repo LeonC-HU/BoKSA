@@ -1,6 +1,4 @@
-const url = (window.location != window.parent.location)
-            ? document.referrer
-            : document.location.href;
+const url = document.location.href;
 localStorage.setItem("url", url);
 console.log(url);
 
