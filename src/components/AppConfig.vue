@@ -80,7 +80,7 @@ const {
           <ToggleSwitch
             v-model="themeState.ripple.active"
             class="mt-1"
-            name="Ripple"
+            pt:input:name="Ripple"
             aria-label="Toggle Ripple effect" />
         </div>
         <!-- RTL Option -->
@@ -100,7 +100,7 @@ const {
           <ToggleSwitch
             v-model="themeState.rtl.active"
             class="mt-1"
-            name="RTL"
+            pt:input:name="RTL"
             aria-label="Toggle RTL (Right to Left)" />
         </div>
       </div>

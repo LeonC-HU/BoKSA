@@ -43,6 +43,7 @@ const { themeState } = useThemeState();
             @click="themeState.darkMode.active = !themeState.darkMode.active"
             text
             rounded
+            name="Toggle dark mode"
             aria-label="Toggle dark mode"
             icon="pi pi-sun">
             <i 
@@ -68,7 +69,8 @@ const { themeState } = useThemeState();
             icon="pi pi-cog"
             text
             rounded
-            aria-label="Settings" />
+            name="Theme settings"
+            aria-label="Theme settings" />
           <AppConfig />
         </div>
         <!-- Search and filter section -->

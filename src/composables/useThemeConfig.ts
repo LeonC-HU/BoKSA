@@ -587,7 +587,6 @@ export function useThemeState(): ThemeStateComposable {
         setSurfaceColor(themeState.value.colors.surface);
       }
     },
-    // { immediate: true }  // This makes it run once immediately on page reload
   )
   function setPrimaryColor(color: ThemeColor): void {
     if (color) {
@@ -624,7 +623,6 @@ export function useThemeState(): ThemeStateComposable {
   watch(() => themeState.value.darkMode.active, (active) => {
       setDarkMode(active);
     },
-    // { immediate: true }  // This makes it run once immediately on page reload
   )
   function setDarkMode(active: boolean): void {
     if (active) {
@@ -638,7 +636,6 @@ export function useThemeState(): ThemeStateComposable {
   watch(() => themeState.value.ripple.active, (active) => {
       setRipple(active);
     },
-    // { immediate: true }  // This makes it run once immediately on page reload
   )
   function setRipple(active: boolean): void {
     if ($primevue) {
@@ -650,7 +647,6 @@ export function useThemeState(): ThemeStateComposable {
   watch(() => themeState.value.rtl.active, (active) => {
       setRtl(active);
     },
-    // { immediate: true }  // This makes it run once immediately on page reload
   )
   function setRtl(active: boolean): void {
     document.documentElement.dir = active ? "rtl" : "ltr";
