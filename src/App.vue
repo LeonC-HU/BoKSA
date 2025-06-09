@@ -8,7 +8,7 @@ const boilerplateContent = ref(true);
 provide("boilerplateContent", boilerplateContent);
 
 // Provide global variable to set testing conditions
-const testing = ref(true);
+const testing = ref(false);
 provide("testing", testing);
 
 defineExpose({
