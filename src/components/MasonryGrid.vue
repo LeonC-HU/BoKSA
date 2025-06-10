@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { inject, getCurrentInstance, nextTick, onMounted, ref, Ref, watch } from "vue";
-import { useScriptTag } from "@vueuse/core";
-import { VueMasonryPlugin } from "vue-masonry";
 import Lorem from "vue-lorem-ipsum";
+import { VueMasonryPlugin } from "vue-masonry";
+import { useScriptTag } from "@vueuse/core";
 import { CardData, audioCards, testCards } from "../data/Cards"
 
 const boilerplateContent: Ref<boolean> = inject<Ref<boolean>>("boilerplateContent", ref(false));
@@ -14,31 +14,27 @@ watch(() => boilerplateContent.value, () => {
 })
 
 const testing: Ref<boolean> = inject<Ref<boolean>>("testing", ref(false));
-
 const cards: Ref<CardData[]> = ref(testing.value ? testCards : audioCards);
 watch(() => testing.value, (newValue: boolean) => {
   cards.value = newValue ? testCards : audioCards;
   redrawCards();
 })
 
-const instance = getCurrentInstance();
-if (instance) {
-  instance.appContext.app.use(VueMasonryPlugin);
+const currentInstance = getCurrentInstance();
+if (currentInstance) {
+  currentInstance.appContext.app.use(VueMasonryPlugin);
 }
 
-async function redrawCards(currentInstance = instance, delay = 500): Promise<void> {
-  // Wait for DOM to update
+async function redrawCards(instance = currentInstance, delay = 500): Promise<void> {
   await nextTick();
   
-  // Run Holder.js
   if (window.Holder) {
-    window.Holder.run();
+    await window.Holder.run();
   }
-  
-  // Wait for masonry update
-  if (currentInstance) {
+
+  if (instance) {
     await new Promise(resolve => setTimeout(() => {
-      currentInstance.appContext.app.config.globalProperties.$redrawVueMasonry();
+      instance.appContext.app.config.globalProperties.$redrawVueMasonry();
       resolve(undefined);
     }, delay));
   }
@@ -74,15 +70,15 @@ declare global {
         target="_parent"
         rel="noopener noreferrer"
         class="block no-underline text-inherit">
-        <Card
-          class="mx-0 my-2 md:mr-4 rounded-lg transition-all duration-250 hover:scale-[1.025] transform hover:shadow-lg hover:shadow-primary-300/50 dark:hover:shadow-primary-700/50"
+          <Card
+          class="dark:bg-surface-800 mx-0 my-2 md:mr-4 rounded-lg transition-all duration-250 hover:scale-[1.025] transform hover:shadow-[0px_0px_4px_4px_rgba(0,0,0,0.1)] dark:hover:shadow-[0px_0px_4px_4px_rgba(255,255,255,0.2)]"
         >
           <template
             #header
             class="m-0">
             <img
               v-if="boilerplateContent"
-              class="object-cover"
+              class="object-cover px-6 pt-6"
               data-src="holder.js/100px200?random=yes&outline=yes" />
           </template>
           <template #title>

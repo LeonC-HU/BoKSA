@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { getCurrentInstance, nextTick } from "vue";
 import { useThemeState } from "../composables/useThemeConfig";
 
 const {
@@ -10,11 +11,19 @@ const {
   setSurfaceColor,
 } = useThemeState();
 
+const currentInstance = getCurrentInstance();
+async function redrawCards(): Promise<void> {
+  await nextTick();
+  
+  if (currentInstance) {
+    currentInstance.appContext.app.config.globalProperties.$redrawVueMasonry();
+  }
+}
 </script>
 
 <template>
   <div
-    class="absolute top-12 w-64 xs:-right-28 p-4 bg-surface-0 dark:bg-surface-900 rounded-md shadow-lg border border-surface-200 dark:border-surface-700 origin-top z-50 hidden">
+    class="absolute top-12 w-64 -right-0 p-4 bg-surface-0 dark:bg-surface-900 rounded-md shadow-lg border border-surface-200 dark:border-surface-700 origin-top z-50 hidden">
     <div class="flex flex-col gap-2">
       <!-- Primary Color Selection -->
       <div>
@@ -59,7 +68,9 @@ const {
           v-model="themeState.theme"
           :options="availableThemes"
           :allowEmpty="false"
-          optionLabel="label" />
+          optionLabel="label"
+          @change="redrawCards()"
+        />
       </div>
       <!-- Additional Settings -->
       <div 
