@@ -86,7 +86,8 @@ const { themeState } = useThemeState();
             <Button
               icon="pi pi-filter"
               severity="secondary"
-              variant="text" />
+              variant="text"
+              class="p-0 h-full rounded-l-none" />
           </InputGroupAddon>
         </InputGroup>
       </div>
