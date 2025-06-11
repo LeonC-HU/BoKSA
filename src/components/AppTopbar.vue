@@ -75,7 +75,7 @@ const toggleSearchFilters = (event: MouseEvent) => {
                 :class="[
                   'pi',
                   'pi',
-                  { 'pi-moon': themeState.darkMode.active, 'pi-sun': !themeState.darkMode.active },
+                  { 'pi-sun': themeState.darkMode.active, 'pi-moon': !themeState.darkMode.active },
                 ]"/>
             </Button>
           </div>
