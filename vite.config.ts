@@ -8,7 +8,7 @@ import { PrimeVueResolver } from "@primevue/auto-import-resolver";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    base: '/BoKSA/',
+    base: './',
     plugins: [
         vue(),
         vueDevTools({
@@ -25,6 +25,6 @@ export default defineConfig({
         }
     },
     server: {
-      allowedHosts: ['c1396905.local']
+      allowedHosts: ['C1415152.local']
     },
 });

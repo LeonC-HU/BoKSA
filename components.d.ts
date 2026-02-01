@@ -11,9 +11,7 @@ declare module 'vue' {
     AppConfig: typeof import('./src/components/AppConfig.vue')['default']
     AppTopbar: typeof import('./src/components/AppTopbar.vue')['default']
     Button: typeof import('primevue/button')['default']
-    Calendar: typeof import('primevue/calendar')['default']
     Card: typeof import('primevue/card')['default']
-    Dropdown: typeof import('primevue/dropdown')['default']
     IconField: typeof import('primevue/iconfield')['default']
     InputGroup: typeof import('primevue/inputgroup')['default']
     InputGroupAddon: typeof import('primevue/inputgroupaddon')['default']
@@ -22,14 +20,12 @@ declare module 'vue' {
     MainLogo: typeof import('./src/components/MainLogo.vue')['default']
     MasonryGrid: typeof import('./src/components/MasonryGrid.vue')['default']
     MyDataView: typeof import('./src/components/MyDataView.vue')['default']
-    OverlayPanel: typeof import('primevue/overlaypanel')['default']
-    Popover: typeof import('primevue/popover')['default']
     ScrollTop: typeof import('primevue/scrolltop')['default']
     SelectButton: typeof import('primevue/selectbutton')['default']
     ToggleSwitch: typeof import('primevue/toggleswitch')['default']
     Toolbar: typeof import('primevue/toolbar')['default']
   }
-  export interface ComponentCustomProperties {
+  export interface GlobalDirectives {
     StyleClass: typeof import('primevue/styleclass')['default']
   }
 }

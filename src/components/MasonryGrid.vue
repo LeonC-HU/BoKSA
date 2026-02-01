@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { inject, getCurrentInstance, nextTick, onMounted, ref, Ref, watch } from "vue";
 import Lorem from "vue-lorem-ipsum";
+import { inject, getCurrentInstance, nextTick, onMounted, ref, Ref, watch } from "vue";
 import { VueMasonryPlugin } from "vue-masonry";
 import { useScriptTag } from "@vueuse/core";
 import { CardData, audioCards, testCards } from "../data/Cards"

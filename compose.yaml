@@ -1,0 +1,12 @@
+name: BoKSA-VueJS
+
+services:
+  server:
+    build:
+      context: .
+    image: boksa-vuejs-app:dev
+    container_name: BoKSA-VueJS-App
+    environment:
+      NODE_ENV: development
+    ports:
+      - 5173:5173
